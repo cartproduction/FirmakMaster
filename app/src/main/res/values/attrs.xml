@@ -35,4 +35,5 @@
         <attr name="biv_drawCircularShadow" format="boolean" />
         <attr name="biv_selectorOnPress" format="color|reference" />
     </declare-styleable>
+
 </resources>

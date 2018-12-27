@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -20,21 +21,15 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
-import static java.lang.Thread.sleep;
-
 
 public class SplashActivity extends AppCompatActivity{
     private Button login, register;
     //public List<Sbit> sabt = new ArrayList<Sbit>();
     private static final String SAVING_STATE_SLIDER_ANIMATION = "SliderAnimationSavingState";
     private boolean isSliderAnimation = false;
+    ViewPager viewPager;
+    TextView titleView;
+    TextView hintView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +39,13 @@ public class SplashActivity extends AppCompatActivity{
         Window window = getWindow();
         window.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 
+        titleView = (TextView) findViewById(R.id.landing_txt_title);
+        hintView = (TextView) findViewById(R.id.landing_txt_hint);
 
+        titleView.setText(getResources().obtainTypedArray(R.array.titles).getString(0));
+        hintView.setText(getResources().obtainTypedArray(R.array.hints).getString(0));
+
+        hintView.setMovementMethod(new ScrollingMovementMethod());
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,30 +55,51 @@ public class SplashActivity extends AppCompatActivity{
             }
         });
 
-        ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+        viewPager = (ViewPager) findViewById(R.id.pager);
 
-        viewPager.setAdapter(new ViewPagerAdapter(R.array.icons, ApplicationClass.baslik, ApplicationClass.aciklama,R.array.landing_bg));
-
-        CirclePageIndicator mIndicator  = (CirclePageIndicator) findViewById(R.id.indicator);
-        mIndicator.setViewPager(viewPager);
+        viewPager.setAdapter(new ViewPagerAdapter(R.array.icons));
 
         viewPager.setPageTransformer(true, new CustomPageTransformer());
 
+        ViewGroup.LayoutParams lp = (ViewGroup.LayoutParams) viewPager.getLayoutParams();
+        lp.height = (ApplicationClass.height/3)*2-100;
+        viewPager.setLayoutParams(lp);
 
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+                titleView.setText(getResources().obtainTypedArray(R.array.titles).getString(position));
+                hintView.setText(getResources().obtainTypedArray(R.array.hints).getString(position));
+                if(position == 2)
+                    login.setVisibility(View.VISIBLE);
+                else
+                    login.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
+        CirclePageIndicator mIndicator = (CirclePageIndicator) findViewById(R.id.indicator);
+        mIndicator.setViewPager(viewPager);
 
     }
 
     public class ViewPagerAdapter extends PagerAdapter {
 
-        private int iconResId,  landing_bg;
-        public List<Sbit> titleArrayResId,hintArrayResId;
+        private int iconResId;
 
-        public ViewPagerAdapter(int iconResId, List<Sbit> titleArrayResId, List<Sbit> hintArrayResId, int landing_bg) {
+        public ViewPagerAdapter(int iconResId) {
 
             this.iconResId = iconResId;
-            this.titleArrayResId = titleArrayResId;
-            this.hintArrayResId = hintArrayResId;
-            this.landing_bg = landing_bg;
         }
 
         @Override
@@ -94,22 +116,16 @@ public class SplashActivity extends AppCompatActivity{
         public Object instantiateItem(ViewGroup container, int position) {
 
             Drawable icon = getResources().obtainTypedArray(iconResId).getDrawable(position);
-            String title = titleArrayResId.get(position).getValue();
-            String hint = hintArrayResId.get(position).getValue();
-            Drawable back = getResources().obtainTypedArray(landing_bg).getDrawable(position);
 
             View itemView = getLayoutInflater().inflate(R.layout.viewpager_item, container, false);
 
-
             ImageView iconView = (ImageView) itemView.findViewById(R.id.landing_img_slide);
-            TextView titleView = (TextView)itemView.findViewById(R.id.landing_txt_title);
-            TextView hintView = (TextView)itemView.findViewById(R.id.landing_txt_hint);
-            ImageView abackg = (ImageView)itemView.findViewById(R.id.backg);
+
+            ViewGroup.LayoutParams lp = (ViewGroup.LayoutParams) iconView.getLayoutParams();
+            lp.height = (ApplicationClass.height/3)*2-100;
+            iconView.setLayoutParams(lp);
 
             iconView.setImageDrawable(icon);
-            titleView.setText(title);
-            hintView.setText(hint);
-            abackg.setImageDrawable(back);
 
             container.addView(itemView);
 
@@ -132,7 +148,6 @@ public class SplashActivity extends AppCompatActivity{
             View imageView = view.findViewById(R.id.landing_img_slide);
             View contentView = view.findViewById(R.id.landing_txt_hint);
             View txt_title = view.findViewById(R.id.landing_txt_title);
-            View abackg = view.findViewById(R.id.backg);
             if (position < -1) { // [-Infinity,-1)
                 // This page is way off-screen to the left
             } else if (position <= 0) { // [-1,0]
@@ -154,11 +169,6 @@ public class SplashActivity extends AppCompatActivity{
                     setAlpha(imageView,1 + position);
                 }
 
-                if (abackg != null) {
-                    // Fade the image in
-                    setAlpha(abackg,1 + position);
-                }
-
             } else if (position <= 1) { // (0,1]
                 // This page is moving in from the right
 
@@ -176,11 +186,6 @@ public class SplashActivity extends AppCompatActivity{
                 if (imageView != null) {
                     // Fade the image out
                     setAlpha(imageView,1 - position);
-                }
-
-                if (abackg != null) {
-                    // Fade the image out
-                    setAlpha(abackg,1 - position);
                 }
 
             }

@@ -1,35 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical"
-    tools:context=".SplashActivity">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="@null" />
+        android:layout_width="match_parent"
+        android:layout_margin="15dp"
+        android:layout_height="350dp" />
 
     <com.application.firmak.CirclePageIndicator
         android:id="@+id/indicator"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
-        android:layout_alignParentBottom="true"
-        android:padding="@dimen/padding_normal" />
+        android:layout_margin="5dp"
+        android:layout_below="@id/pager" />
+
+    <TextView
+        android:id="@+id/landing_txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/material_drawer_dark_selected"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_below="@id/indicator"
+        android:layout_margin="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/landing_txt_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="5"
+        android:layout_below="@+id/landing_txt_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:layout_centerHorizontal="true"
+        android:lineSpacingExtra="3dp"
+        android:text=""
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
 
     <Button
         android:id="@+id/login"
+        android:layout_below="@+id/landing_txt_hint"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_above="@+id/indicator"
-        android:background="@mipmap/ic_launcher"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorAccent" />
-
-
+        android:layout_margin="15dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:text="@string/hadibaslayalim"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="30dp"
+        android:textColor="@color/white" />
 </RelativeLayout>

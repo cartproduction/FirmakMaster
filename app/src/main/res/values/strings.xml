@@ -5,6 +5,29 @@
     <string name="menu_item3">Play</string>
     <string name="menu_item4">Favorite</string>
     <string name="menu_item5">Profile</string>
+
+    <string name="giris">Giriş Yap</string>
+    <string name="sifremiunuttum">Şifemi Unuttum</string>
+    <string name="eger">Eğer bir hesabınız yoksa</string>
+    <string name="kayitol">Kayıt Olun</string>
+
+    <string name="hadibaslayalim">Hadi Baslayalım...</string>
+    <string name="login">Giriş</string>
+    <string name="splashheader1">Onboarding Title 1</string>
+    <string name="splashheader2">Onboarding Title 2</string>
+    <string name="splashheader3">Onboarding Title 3</string>
+
+    <string name="splashtext1">FİMAK Döner Arabalı Ekmek Fırınının başlıca özelliği eşit ısı dağılımı, yüksek verimle çalışması ve düzenli sirkülasyonudur. Yüksek verimi iyi tasarlanmış ısı eşanjörleriyle (ısı değiştiricisi) sağlanmaktadır. Bu sayede emsallerine göre daha az enerji ile istenilen özellikte ürün elde edilmesi sağlanır.
+
+    Yanma hücresi ısıya dayanıklı yüksek kalite paslanmaz çelikten imal edilmektedir. Çift yönlü kasetli buhar sistemi sayesinde yüksek seviyede buhar üretilip her tavanın yeterince beslenmesi sağlanmaktadır.</string>
+
+    <string name="splashtext2">FİMAK Döner Arabalı Ekmek Fırınının başlıca özelliği eşit ısı dağılımı, yüksek verimle çalışması ve düzenli sirkülasyonudur. Yüksek verimi iyi tasarlanmış ısı eşanjörleriyle (ısı değiştiricisi) sağlanmaktadır. Bu sayede emsallerine göre daha az enerji ile istenilen özellikte ürün elde edilmesi sağlanır.
+
+    Yanma hücresi ısıya dayanıklı yüksek kalite paslanmaz çelikten imal edilmektedir. Çift yönlü kasetli buhar sistemi sayesinde yüksek seviyede buhar üretilip her tavanın yeterince beslenmesi sağlanmaktadır.</string>
+
+    <string name="splashtext3">FİMAK Döner Arabalı Ekmek Fırınının başlıca özelliği eşit ısı dağılımı, yüksek verimle çalışması ve düzenli sirkülasyonudur. Yüksek verimi iyi tasarlanmış ısı eşanjörleriyle (ısı değiştiricisi) sağlanmaktadır.</string>
+
+
     <!-- /Strings Menu Bottom Bar Navigation/ -->
     <string name="share_subject_for_hata">"SAUAR – 1.0.1 / Feedback"</string>
     <string name="notification_badge">9</string>
