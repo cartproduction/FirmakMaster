@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Firmak</string>
+    <string name="menu_item1">Home</string>
+    <string name="menu_item2">Search</string>
+    <string name="menu_item3">Play</string>
+    <string name="menu_item4">Favorite</string>
+    <string name="menu_item5">Profile</string>
+    <!-- /Strings Menu Bottom Bar Navigation/ -->
+    <string name="share_subject_for_hata">"SAUAR – 1.0.1 / Feedback"</string>
+    <string name="notification_badge">9</string>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="badge">#f89406</color>
+
+    <!-- MaterialDrawer DEFAULT DARK drawer colors -->
+    <color name="material_drawer_dark_selected">#202020</color>
+    <color name="material_drawer_dark_header_selection_text">#FFF</color>
+
+    <color name="light_green">#3eb74e</color>
+    <color name="light_purple">#8c61b3</color>
+    <color name="light_orange">#ffb500</color>
+    <color name="light_cyan">#00BCD4</color>
+    <color name="psi">#be5508</color>
+    <color name="shapec">#232629</color>
+    <color name="white">#fff</color>
+    <!-- Yardim ekran renkleri -->
+    <color name="guide_main_backgraund_color">#002d52</color>
+    <color name="action_bar_color">#003A6A</color>
+    <color name="action_bar_drawler_color">#003A6A</color>
+
+
+    <color name="sosyal_ar_outer_circle">#063479</color>
+    <color name="sosyal_ar_inner_circle">#1a58ae</color>
+
+    <color name="marker_infowindow_color">#003A6A</color>
+
+    <color name="rehber_ar_map_info_backgraund">#063479</color>
+
+    <color name="rehber_ar_map_detay_button">#064096</color>
+
+    <color name="rehber_ar_map_yol_tarifi_button">#1a57ae</color>
+
+    <color name="transperant">#00000000</color>
+
+    <color name="splash_backgraund_color">#063479</color>
+
+    <color name="developed_by_regis_backgraund">#24b88e</color>
+
+
+
+    <color name="topshapecolor">#EDBB3F</color>
+</resources>

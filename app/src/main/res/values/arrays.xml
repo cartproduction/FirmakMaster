@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer-array name="landing_bg">
+        <item>@drawable/favorite</item>
+        <item>@drawable/favorite</item>
+        <item>@drawable/favorite</item>
+        <item>@drawable/favorite</item>
+
+    </integer-array>
+
+    <array name="icons">
+        <item>@drawable/favorite</item>
+        <item>@drawable/favorite</item>
+        <item>@drawable/favorite</item>
+        <item>@drawable/favorite</item>
+
+    </array>
+
+    <string-array name="titles" >
+
+        <item>@string/menu_item1</item>
+        <item>@string/menu_item1</item>
+        <item>@string/menu_item1</item>
+        <item>@string/menu_item1</item>
+
+    </string-array>
+
+    <string-array name="hints" >
+
+        <item>@string/menu_item2</item>
+        <item>@string/menu_item2</item>
+        <item>@string/menu_item2</item>
+        <item>@string/menu_item2</item>
+
+    </string-array>
+</resources>
