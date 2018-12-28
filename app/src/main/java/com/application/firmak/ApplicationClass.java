@@ -80,8 +80,7 @@ public class ApplicationClass{
 
     public static JSONArray infoFromAssets;
 
-    public static final String WIKITUDE_SIGNED_SDK_KEY = "SIaAGaxwjS9U4FS7IegP/EDCZ1h5VFzX3Lt3qFjAxQrQ6w/iwu8tXv1Iq++T7eOeu10V99GW3UyKYwXY+Hna+IMMleEV7Is400xsW5f4IEmqcOooPfLJQLj21OrFHeJAXJ7owV9q30KS+Th1Nzv+mQ3X3433GHerdc9fqbNmwXFTYWx0ZWRfXxSlGXk4RON6b4YYrPjLc3FtZqVNMPODGkdil+HPHnuSbgi4PrAIx60Vz55DL2CUuH0TuK1Hd0nEeEi1KsX+55L00y7hXgE/+xjMxX4E7HIK4EarOC8FpHvzrax5cn3Jb7g/qSRRFlY4zoFlBVZEyWycJrxQC8/gpg+3JGS0UHiT+RAVpYSCkN6tYdAKHd3ZkFG7iOOajMsx0GkWLn7o/qW1EW+K8kgUIcB0jJReFcOW8df7wPaisCfgSf4USLE7c/L1N8zfQYYptIVG74nwuPQ+RaZ/+PlAagmt5gQmrm7yxI1otgPnRaX6vOYCpD+M9WGcD3ttAHgdCrviDfN6aPVcr7B7Z4zulPPcxINZBQCyUh43dV6ppQZcV1WbCvpGrsbenAaDhnatd5VxHzF/JlyjVhqrloYZVSPvo1tR2M/DioqbBeAtBb4GDSkR4ssL/sr2UeXKtbOqkmVe5/KAYEIO3mQyZ1cFVGAHnLyBNnaJPbfS7Xh9uMJ+1zLDHudD7v+KL/pLpEmBAvDh1wgwUiGNzIQrgQznt5+SUdsn06hdhOPycIh4re1YP5UXTdzmrmAjy3OgWCd9";
-    public static void initShareIntent(String type , Context ctx) {
+   public static void initShareIntent(String type , Context ctx) {
         boolean found = false;
         Intent share = new Intent(android.content.Intent.ACTION_SEND);
         share.setType("text/plain");
