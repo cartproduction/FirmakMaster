@@ -36,4 +36,11 @@
         <attr name="biv_selectorOnPress" format="color|reference" />
     </declare-styleable>
 
+    <declare-styleable name="SwipeRevealLayout">
+        <attr name="dragFromEdge">
+            <flag name="left" value="1" />
+            <flag name="right" value="2" />
+        </attr>
+    </declare-styleable>
+
 </resources>
