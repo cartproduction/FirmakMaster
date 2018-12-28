@@ -1,9 +1,10 @@
-package com.application.firmak
+package com.application.firmak.activities
 
 import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
+import com.application.firmak.R
 import com.application.firmak.fragments.Login
 
 class LoginActivity : AppCompatActivity() {

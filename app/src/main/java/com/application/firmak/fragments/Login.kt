@@ -8,7 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
-import com.application.firmak.MainActivity
+import com.application.firmak.activities.MainActivity
 import com.application.firmak.R
 import kotlinx.android.synthetic.main.fragment_log.*
 

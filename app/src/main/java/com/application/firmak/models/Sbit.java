@@ -1,4 +1,4 @@
-package com.application.firmak;
+package com.application.firmak.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -15,7 +15,7 @@ private String value;
 @Expose
 private String description;
 
-    Sbit(String key,String value,String description){
+    public Sbit(String key, String value, String description){
         this.key = key;
         this.value = value;
         this.value = description;

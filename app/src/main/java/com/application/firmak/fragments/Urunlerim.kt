@@ -1,6 +1,5 @@
 package com.application.firmak
 
-import android.graphics.Canvas
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.DividerItemDecoration
@@ -11,15 +10,12 @@ import android.view.View
 import android.view.ViewGroup
 import iammert.com.expandablelib.ExpandableLayout
 import iammert.com.expandablelib.Section
-import kotlinx.android.synthetic.main.layout_child.*
 import kotlinx.android.synthetic.main.layout_child.view.*
 import kotlinx.android.synthetic.main.layout_header.view.*
 import kotlinx.android.synthetic.main.urunlerim.*
-import android.support.v7.widget.helper.ItemTouchHelper
-import android.support.v7.widget.RecyclerView
-
-
-
+import com.application.firmak.adapters.ProductRecyclerViewAdapter
+import com.application.firmak.adapters.TeslimEdilecekProductRecyclerViewAdapter
+import com.application.firmak.models.ProductItem
 
 
 class Urunlerim: Fragment() {
@@ -50,8 +46,8 @@ class Urunlerim: Fragment() {
 
             override fun renderChild(view: View, model: String, parentPosition: Int, childPosition: Int) {
 
-                val item1 = ProductItem("V Yaka Uzun Elbise", "18YOX-POLASBISE", "1X129,00 TL", R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher)
-                val item2 = ProductItem("V Yaka Gömlek", "18YOX-POLASBISE", "1X65,00 TL", R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher)
+                val item1 = ProductItem("Estone 300", "3 Katlı, Mayalandırma Odalı, Dijital Panel, Hava Klapesi, Sİyah Ön Görünüm, Davlumbaz.", "1X129,00 TL", R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher)
+                val item2 = ProductItem("Rokon", "3 Katlı, Mayalandırma Odalı, Dijital Panel, Hava Klapesi, Sİyah Ön Görünüm, Davlumbaz.", "1X65,00 TL", R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher)
                 teslimEdilecekproductArray.clear()
                 teslimEdilecekproductArray.add(item1)
                 teslimEdilecekproductArray.add(item2)

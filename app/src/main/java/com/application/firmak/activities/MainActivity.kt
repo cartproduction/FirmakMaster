@@ -1,10 +1,9 @@
-package com.application.firmak
+package com.application.firmak.activities
 
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
 import android.support.v4.content.res.ResourcesCompat
 import android.support.v4.graphics.drawable.DrawableCompat
@@ -13,6 +12,7 @@ import android.support.v7.widget.Toolbar
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
+import com.application.firmak.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -21,10 +21,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        BottomNavigationViewHelper.disableShiftMode(bottomNavigationView)
+    BottomNavigationViewHelper.disableShiftMode(bottomNavigationView)
 
         bottomNavigationView.selectedItemId = R.id.menu_item3
-        BottomNavigationViewHelper.addBadge(bottomNavigationView,this,3)
+    BottomNavigationViewHelper.addBadge(bottomNavigationView, this, 3)
 
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             var selectedFragment: Fragment? = null
@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
                     R.id.menu_item3 -> selectedFragment = Fragment3()
                     R.id.menu_item4 -> {
                         selectedFragment = Fragment4()
-                        BottomNavigationViewHelper.removeBadge(bottomNavigationView,this,3)
+                        BottomNavigationViewHelper.removeBadge(bottomNavigationView, this, 3)
                     }
                     R.id.menu_item5 -> selectedFragment = Fragment5()
                 }

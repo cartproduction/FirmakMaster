@@ -7,6 +7,8 @@ import android.location.Location;
 import android.util.Log;
 
 
+import com.application.firmak.models.Sbit;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 

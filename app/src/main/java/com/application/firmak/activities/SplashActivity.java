@@ -1,10 +1,7 @@
-package com.application.firmak;
+package com.application.firmak.activities;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
@@ -17,9 +14,12 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.application.firmak.ApplicationClass;
+import com.application.firmak.CirclePageIndicator;
+import com.application.firmak.R;
 
 
 public class SplashActivity extends AppCompatActivity{
